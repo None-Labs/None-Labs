@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nonelabs</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>None Labs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        #banner {
+            width: 427px;
+            height: 28px;
+        }
+        
+        #main {
+            margin-top: 212px;
+            margin-left: 350px;
+        }
+
+        #banner {
+            width: 339px;
+            height: auto;
+
+            font-family: "Red Hat Display";
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+            color: #343434;
+        }
+        
+    </style>
+
 </head>
 <body>
-    <header>
-        <h1 class="wrap"><a href="./index.html">Nonelabs</a></h1>
-    </header>
-    <section class="main section">        
-        <div class="wrap">
-            <h2>
-                everyday convenience,
-                <br>
-                Nonelabs
-                <p>일상의 편리함,NoneLabs</p>
-            </h2>
+
+    <div id="menu-bar">
+        <a id="logo-full" style="margin-right: 58px;" href="./main.html"></a>
+        <!-- <a id="menu" href="">About us</a> -->
+        <a id="menu" href="./products.html">Products</a>
+    </div>
+
+    <div id="main">
+        <div id="mini-logo" style="margin-bottom: 10px;"></div>
+        <div id="banner">Convenience in everyday life</div>
+    </div>
+
+    <div id="footer">
+        <div id="logo-full"></div>
+
+        <div class="footer-info">
+            <div style="display: block;">제주특별자치도 제주시 설촌로8길 34, 401호(삼양이동, Yg엘리시움) 대표: 임미르</div>
+            <div style="display: block;">사업자등록번호: 693-17-01866</div>
+            <div style="display: block;">이메일: limmireu@naver.com</div>
+            <div style="display: block;">© 2023. None Labs. All rights reserved.</div>
         </div>
-    </section>
-    <section class="about section wrap">
-        <h2>About Nonelabs</h2>
-        <div class="aboutNl">
-            <p class="subtitle">새로운 방향을 만들어요!</p>
-            <h2>New Way</h2>
-            <img class="img" src="" alt="">
-            <p class="infotext">세상 속 여러 불편한 점을<br>혁신적인 아이디어로 해결해요!</p>
-        </div>
-        <div class="aboutNl">
-            <p class="subtitle">편리하고 강력한 서비스를 만들어요!</p>
-            <h2>Good Service</h2>
-            <img class="img" src="" alt="">
-            <p class="infotext">편리하고 강력하며 안전한,<br>좋은 서비스를 만들고, 제공해요!</p>
-        </div>
-        <div class="aboutNl" style="border-right: 0;">
-            <p class="subtitle">환경을 생각해요!</p>
-            <h2>Eco Cycling</h2>
-            <img class="img" src="" alt="">
-            <p class="infotext">환경을 보호하고, 사회를 위해 봉사하는,<br>환경과 사회를 위한 착한 기업이 되겠습니다.</p>
-        </div>
-    </section>
-    <section class="last section">
-        <footer class="footer wrap">
-            <img src="./css/img/logo.png" alt="[NL] Nonelabs" width="300px" height="90px">
-            <p>
-                넌랩스 | 제주특별자치도 제주시 설촌로8길 34, 401호(삼양이동, Yg엘리시움) | 대표: 임미르
-                <br>
-                사업자등록번호: 693-17-01866
-                <br>
-                이메일: limmireu@naver.com
-                <br>
-                © 2023. None Labs. All rigth reserved.
-            </p>
-        </footer>
-    </section>
-    <script src="./js/script.js"></script>
+    </div>
+
+
 </body>
 </html>

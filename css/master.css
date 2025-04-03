@@ -1,0 +1,17 @@
+
+html {
+    padding: 0 0;
+    bottom: 0 0;
+    margin: 0 0;
+}
+
+body {
+    background: #F5F5F5;
+    
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* menu(auto), main(남은공간), footer(auto) */
+    min-height: 140vh;
+    margin: 0;
+    padding: 0;
+}
+

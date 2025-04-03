@@ -1,0 +1,17 @@
+#menu-bar {
+    margin-top: 50px;
+    margin-left: 350px;
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    font-family: "Red Hat Display";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #686868;
+    
+    margin-right: 58px;
+}
