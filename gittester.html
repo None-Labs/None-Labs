@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitTester - Main</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        b {
+            color: #343434;
+            font-family: "Red Hat Display";
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 400;   
+            line-height: normal;
+        }
+
+        h2, p {
+            color: #888;
+            font-family: "Red Hat Display";
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .showcase-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-section {
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 180px;
+            padding: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .text-content {
+            flex: 1 1 40%;
+        }
+
+        .title {
+            font-size: 42px; 
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #343434;
+            font-family: "Red Hat Display";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        .image-content {
+            flex: 1 1 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 60%;
+        }
+
+        
+        .feature-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #gittester-banner {
+            margin: 150px 0px 150px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="menu-bar">
+        <a id="logo-full" style="margin-right: 58px;" href="/"></a>
+        <a id="menu" href="/products.html">Products</a>
+        <a id="menu" href="/dashboard">DashBoard</a>
+    </div>
+    
+    
+    <main class="showcase-container">
+        <img id="gittester-banner" src="img/gittester.svg" alt="">
+        
+        <section class="feature-section section-1" style="display: flex;">
+            <div class="text-content">
+                <h2 class="title">
+                    <b>Build</b>, Test, Deploy,
+                    <br>
+                    Document
+                </h2>
+                <p class="description">
+                    After three steps, <br>
+                    complex pipeline setting <br>
+                    automatically proceeds
+                </p>
+            </div>
+            <img class="image-content" src="img/article-img1.png" alt="Pipeline creation steps interface">
+        </section>
+
+        <section class="feature-section section-2">
+            <div class="text-content">
+                <h2 class="title">
+                    Build, <b>Test, Deploy</b>,
+                    <br>
+                    Document
+                </h2>
+                <p class="description">
+                    Learned AI tests code, <br>
+                    deploys it immediately
+                </p>
+            </div>
+            <img class="image-content" src="img/article-img2.png" alt="Pipeline dashboard interface">
+        </section>
+
+        <section class="feature-section section-3">
+            <div class="text-content">
+                <h2 class="title">
+                    Build, Test, Deploy,
+                    <br>
+                    <b>Document</b>
+                </h2>
+                <p class="description">
+                    The learned AI analyzes the code,<br>
+                    Generates API reference documents as well
+                </p>
+            </div>
+            <img class="image-content" src="img/article-img3.png" alt="API documentation interface">
+        </section>
+
+    </main>
+
+    <div id="footer">
+        <div id="logo-full"></div>
+
+        <div class="footer-info">
+            <div style="display: block;">제주특별자치도 제주시 설촌로8길 34, 401호(삼양이동, Yg엘리시움) 대표: 임미르</div>
+            <div style="display: block;">사업자등록번호: 693-17-01866</div>
+            <div style="display: block;">이메일: service@none-labs.dev</div>
+            <div style="display: block;">© 2023. None Labs. All rights reserved.</div>
+        </div>
+    </div>
+
+</body>
+</html>
