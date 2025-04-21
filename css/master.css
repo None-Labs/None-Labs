@@ -10,7 +10,7 @@ body {
     
     display: grid;
     grid-template-rows: auto 1fr auto; /* menu(auto), main(남은공간), footer(auto) */
-    min-height: 140vh;
+    /* min-height: 140vh; */
     margin: 0;
     padding: 0;
 }
