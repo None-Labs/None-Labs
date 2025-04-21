@@ -46,11 +46,20 @@
 
         #small-screen {
             display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+        }
+
+        #small-screen-text {
+            padding: 3rem;
+            font-size: 2rem;
+            border-radius: 1rem;
         }
 
         @media (max-width: 1400px) {
             #large-screen {display: none;}
-            #small-screen {display: block;}
+            #small-screen {display: flex;}
         }
 
         @media (min-width: 1400px) {
@@ -64,9 +73,14 @@
 <body>
 
     <div id="small-screen">
-        <div id="banner">It is not marked in that size.</div>
+        <div id="small-screen-text banner">
+            <h1 id="banner">It is not marked in that size.</h1>
+        </div>
     </div>
 
+
+
+    
     <div id="large-screen">
         <div id="menu-bar">
             <a id="logo-full" style="margin-right: 58px;" href="/"></a>

@@ -89,34 +89,42 @@
             margin: 150px 0px 150px;
         }
 
-        @media (max-width: 1400px) {
-            #large-screen {
-                display: none;
-            }
+        #small-screen {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+        }
 
-            #small-screen {
-                display: block;
-            }
+        #small-screen-text {
+            padding: 3rem;
+            font-size: 2rem;
+            border-radius: 1rem;
+        }
+
+        @media (max-width: 1400px) {
+            #large-screen {display: none;}
+            #small-screen {display: flex;}
         }
 
         @media (min-width: 1400px) {
-            #large-screen {
-                display: block;
-            }
-
-            #small-screen {
-                display: none;
-            }
+            #large-screen {display: block;}
+            #small-screen {display: none;}
         }
     </style>
 
 </head>
 
 <body>
+
     <div id="small-screen">
-        <div id="banner"><h1>It is not marked in that size.</h1></div>
+        <div id="small-screen-text banner">
+            <h1 id="banner">It is not marked in that size.</h1>
+        </div>
     </div>
 
+
+    
     <div id="large-screen">
 
         <div id="menu-bar">
