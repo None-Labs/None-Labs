@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="icon/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycling (ONECYCLE) - None Labs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        b {
+            color: #343434;
+            font-family: "Red Hat Display";
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        h2,
+        p {
+            color: #888;
+            font-family: "Red Hat Display";
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .showcase-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #ecocycling-banner {
+            width: 100%;
+            height: auto;
+            margin: 80px 0px 80px;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 16px 40px rgba(58, 84, 81, 0.18);
+        }
+
+        .hero-action-bar {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 90px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #3A5451;
+            color: #FFFFFF;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-family: "Red Hat Display";
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(58, 84, 81, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #2D4441;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(58, 84, 81, 0.35);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #E5ECEB;
+            color: #3A5451;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-family: "Red Hat Display";
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #D5E1DF;
+            transform: translateY(-2px);
+        }
+
+        .feature-section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 150px;
+            padding: 40px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .feature-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
+            flex: 1 1 45%;
+        }
+
+        .title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #343434;
+        }
+
+        .description {
+            color: #555555;
+            font-family: "Red Hat Display";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: "Red Hat Display";
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: #EAF4F2;
+            color: #3A5451;
+            margin-bottom: 16px;
+        }
+
+        .image-content {
+            flex: 1 1 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 55%;
+            background: #F8F9F9;
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .image-content img {
+            max-width: 100%;
+            max-height: 480px;
+            height: auto;
+            border-radius: 12px;
+            object-fit: contain;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 140px;
+        }
+
+        .tech-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 20px;
+            padding: 32px 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .tech-card h3 {
+            font-family: "Red Hat Display";
+            font-size: 22px;
+            font-weight: 700;
+            color: #343434;
+            margin-top: 14px;
+            margin-bottom: 10px;
+        }
+
+        .tech-card p {
+            font-family: "Red Hat Display";
+            font-size: 16px;
+            line-height: 150%;
+            color: #666666;
+            margin: 0;
+        }
+
+        .tech-pill {
+            display: inline-block;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #3A5451;
+            color: #FFFFFF;
+        }
+
+        #small-screen {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+        }
+
+        #small-screen-text {
+            padding: 3rem;
+            font-size: 2rem;
+            border-radius: 1rem;
+        }
+
+        @media (max-width: 1400px) {
+            #large-screen {display: none;}
+            #small-screen {display: flex;}
+        }
+
+        @media (min-width: 1400px) {
+            #large-screen {display: block;}
+            #small-screen {display: none;}
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="small-screen">
+        <div id="small-screen-text banner">
+            <h1 id="banner">It is not marked in that size.</h1>
+        </div>
+    </div>
+
+    <div id="large-screen">
+
+        <div id="menu-bar">
+            <a id="logo-full" style="margin-right: 58px;" href="/"></a>
+            <a id="menu" href="/products">Products</a>
+            <a id="menu" href="https://ecocycling.none-labs.dev" target="_blank" rel="noopener">Service Web</a>
+            <a id="menu" href="https://github.com/EcoCycling" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <main class="showcase-container">
+            <img id="ecocycling-banner" src="img/ecocycling.svg" alt="EcoCycling (ONECYCLE) Platform Banner">
+
+            <div class="hero-action-bar">
+                <a href="https://ecocycling.none-labs.dev" target="_blank" rel="noopener" class="btn-primary">
+                    <span>Visit Live Service (ecocycling.none-labs.dev)</span>
+                    <span>→</span>
+                </a>
+                <a href="https://ecocycling.none-labs.dev/press/" target="_blank" rel="noopener" class="btn-secondary">
+                    <span>Research &amp; Awards Archive</span>
+                </a>
+                <a href="products.html" class="btn-secondary">
+                    <span>All Products</span>
+                </a>
+            </div>
+
+            <!-- Feature 1: AI Vision Waste Sorting -->
+            <section class="feature-section section-1">
+                <div class="text-content">
+                    <span class="badge">Computer Vision AI</span>
+                    <h2 class="title">
+                        <b>Classify</b>, Sort,
+                        <br>
+                        Measure Pure Resource
+                    </h2>
+                    <p class="description">
+                        Real-time AI Vision detects PET bottles, aluminum cans, glass, and general waste in milliseconds. Automated weight sensor accurately calculates purity and prevents sorting errors.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="img/ecocycling-kiosk.png" alt="Smart Waste Sorting Kiosk UI Display">
+                </div>
+            </section>
+
+            <!-- Feature 2: Smart IoT Kiosk Agent -->
+            <section class="feature-section section-2 reverse">
+                <div class="text-content">
+                    <span class="badge">IoT &amp; Hardware Bridge</span>
+                    <h2 class="title">
+                        Scan, <b>Interact</b>,
+                        <br>
+                        Automated Gate Control
+                    </h2>
+                    <p class="description">
+                        High-performance Golang IoT Agent orchestrates a 5-step state machine (Stand-by, QR Scan, Deposit, Measure, Done) with WebSocket streaming and automated bin door mechanics.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="img/ecocycling-scan.png" alt="IoT Kiosk Dynamic QR Code Interaction">
+                </div>
+            </section>
+
+            <!-- Feature 3: Eco-Reward & Carbon Points Ledger -->
+            <section class="feature-section section-3">
+                <div class="text-content">
+                    <span class="badge">Mobile App &amp; ESG Metrics</span>
+                    <h2 class="title">
+                        Earn Points,
+                        <br>
+                        <b>Reduce Carbon</b> Emissions
+                    </h2>
+                    <p class="description">
+                        Recycled resources convert directly into live reward points and carbon reduction metrics. Track tree-planting equivalents and spend points seamlessly at certified green partner stores.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="img/ecocycling-app.png" alt="Mobile App Carbon Ledger and Rewards Interface">
+                </div>
+            </section>
+
+            <!-- Technical Architecture Grid -->
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <span class="tech-pill">Golang 1.24+ Gin</span>
+                    <h3>Clean Architecture Backend</h3>
+                    <p>Robust REST API and WebSocket engine managing ACID point ledgers, OTP authentication, and multi-tenant kiosk hardware sessions on PostgreSQL 16.</p>
+                </div>
+                <div class="tech-card">
+                    <span class="tech-pill">React Native / Expo 51</span>
+                    <h3>Cross-Platform Mobile App</h3>
+                    <p>Pixel-perfect UI built with TypeScript and Zustand. Offers biometric login, live QR bin scanning, point redemption barcodes, and local map discovery.</p>
+                </div>
+                <div class="tech-card">
+                    <span class="tech-pill">IoT Edge Agent</span>
+                    <h3>Hardware Automation Core</h3>
+                    <p>Embedded Linux state controller interfacing vision cameras, load cells, and motorized doors with failsafe fallback and instant cloud sync.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <div id="footer">
+            <div id="logo-full"></div>
+
+            <div class="footer-info">
+                <div style="display: block;">34, Seolchon-ro 8-gil, Jeju-si, Jeju-do, 401 (Samyang-dong, Yg Elysium)
+                </div>
+                <div style="display: block;">Representative: Mireu Lim</div>
+                <div style="display: block;">Business Registration Number: 693-17-01866</div>
+                <div style="display: block;">Email: service@none-labs.dev</div>
+                <div style="display: block;">Service Hosting: Google Cloud Platform</div>
+                <div style="display: block;">© 2023. None Labs. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

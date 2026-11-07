@@ -44,26 +44,53 @@
             color: #343434;
         }
 
-        #projects {
+        #projects,
+        .projects-item {
             font-family: "Red Hat Display";
             font-weight: 400;
             font-size: 36px;
             line-height: 100%;
 
-            margin-top: 50px;
+            margin-top: 40px;
 
             display: flex;
             align-items: center;
         }
 
-        #projects-icon {
-            margin-left: 10px;
+        .projects-item:first-of-type {
+            margin-top: 50px;
+        }
+
+        #projects-icon,
+        .projects-icon {
+            margin-left: 14px;
 
             width: 30px;
             height: 30px;
 
             background: url(icon/arrow_forward.svg) no-repeat center;
             color: #686868;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .projects-item:hover .projects-icon {
+            transform: translateX(6px);
+        }
+
+        .projects-link {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .project-tagline {
+            font-family: "Red Hat Display";
+            font-size: 16px;
+            color: #888888;
+            margin-top: 6px;
+            margin-left: 2px;
         }
 
         #project-more {
@@ -73,7 +100,7 @@
             line-height: 100%;
 
             color: #686868;
-            margin-top: 182px;
+            margin-top: 140px;
         }
 
         
@@ -119,15 +146,25 @@
             <a id="logo-full" style="margin-right: 58px;" href="/"></a>
             <!-- <a id="menu" href="">About us</a> -->
             <a id="menu" href="/products">Products</a>
+            <a id="menu" href="/ecocycling.html">EcoCycling</a>
         </div>
 
         <div id="main">
             <div id="mini-logo" style="margin-bottom: 10px;"></div>
             <div id="banner">Products</div>
 
-            <div id="projects">
-                <div id="projects-text">Git Tester</div>
-                <a id="projects-icon" href="https://gittester.none-labs.dev"></a>
+            <div class="projects-item" id="projects">
+                <a class="projects-link" href="/gittester.html">
+                    <div id="projects-text">Git Tester</div>
+                    <span class="projects-icon" id="projects-icon"></span>
+                </a>
+            </div>
+
+            <div class="projects-item">
+                <a class="projects-link" href="/ecocycling.html">
+                    <div id="projects-text">EcoCycling</div>
+                    <span class="projects-icon"></span>
+                </a>
             </div>
 
 
