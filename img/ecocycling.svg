@@ -1,0 +1,126 @@
+<svg width="1206" height="633" viewBox="0 0 1206 633" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1206" y2="633" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2D4643"/>
+      <stop offset="50%" stop-color="#3A5451"/>
+      <stop offset="100%" stop-color="#1F3230"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7AE5CD"/>
+      <stop offset="100%" stop-color="#38B2AC"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#BAC9C7"/>
+      <stop offset="100%" stop-color="#E2F1EF"/>
+    </linearGradient>
+    <filter id="shadow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1206" height="633" rx="24" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Ambient Circuit & Circular Lines -->
+  <circle cx="1020" cy="316" r="280" stroke="#BAC9C7" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.25"/>
+  <circle cx="1020" cy="316" r="210" stroke="#7AE5CD" stroke-width="2" opacity="0.2"/>
+  <circle cx="1020" cy="316" r="140" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+
+  <!-- Abstract Geo Nodes -->
+  <path d="M 650 120 L 780 180 L 850 120 L 980 180 L 1120 100" stroke="#BAC9C7" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.2"/>
+  <path d="M 700 520 L 820 460 L 930 510 L 1080 440" stroke="#BAC9C7" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.2"/>
+
+  <!-- Left Content Branding & Typography -->
+  <g transform="translate(90, 110)">
+    <!-- Small Category Pill -->
+    <rect x="0" y="0" width="220" height="36" rx="18" fill="#BAC9C7" fill-opacity="0.15" stroke="#BAC9C7" stroke-opacity="0.3" stroke-width="1.5"/>
+    <circle cx="20" cy="18" r="5" fill="#7AE5CD"/>
+    <text x="35" y="23" font-family="'Red Hat Display', 'Ubuntu', sans-serif" font-size="13" font-weight="600" fill="#E2F1EF" letter-spacing="1.5">AI VISION &amp; IOT PLATFORM</text>
+
+    <!-- Main Title: ECOCYCLING -->
+    <text x="0" y="115" font-family="'Red Hat Display', sans-serif" font-size="64" font-weight="800" fill="#FFFFFF" letter-spacing="-1">ECOCYCLING</text>
+    <text x="430" y="115" font-family="'Red Hat Display', sans-serif" font-size="32" font-weight="400" fill="#BAC9C7">(ONECYCLE)</text>
+
+    <!-- Subtitle / Vision Statement -->
+    <text x="0" y="170" font-family="'Red Hat Display', sans-serif" font-size="24" font-weight="500" fill="#E0EDE9" line-height="1.4">
+      <tspan x="0" dy="0">Smart Waste Sorting, Automated IoT Kiosk,</tspan>
+      <tspan x="0" dy="34">and Sustainable Eco-Reward Ecosystem</tspan>
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="165" height="42" rx="10" fill="#243835" stroke="#486864" stroke-width="1.2"/>
+      <text x="20" y="26" font-family="'Red Hat Display', sans-serif" font-size="14" font-weight="600" fill="#7AE5CD">AI Vision Detector</text>
+
+      <rect x="180" y="0" width="160" height="42" rx="10" fill="#243835" stroke="#486864" stroke-width="1.2"/>
+      <text x="200" y="26" font-family="'Red Hat Display', sans-serif" font-size="14" font-weight="600" fill="#E2F1EF">Smart IoT Kiosk</text>
+
+      <rect x="355" y="0" width="170" height="42" rx="10" fill="#243835" stroke="#486864" stroke-width="1.2"/>
+      <text x="375" y="26" font-family="'Red Hat Display', sans-serif" font-size="14" font-weight="600" fill="#BAC9C7">Carbon Points Ledger</text>
+    </g>
+
+    <!-- Metrics Line -->
+    <g transform="translate(0, 350)">
+      <text x="0" y="20" font-family="'Red Hat Display', sans-serif" font-size="34" font-weight="700" fill="#7AE5CD">98.7%</text>
+      <text x="0" y="42" font-family="'Red Hat Display', sans-serif" font-size="13" font-weight="400" fill="#BAC9C7">AI Accuracy</text>
+
+      <text x="140" y="20" font-family="'Red Hat Display', sans-serif" font-size="34" font-weight="700" fill="#FFFFFF">&lt; 350ms</text>
+      <text x="140" y="42" font-family="'Red Hat Display', sans-serif" font-size="13" font-weight="400" fill="#BAC9C7">Inference Latency</text>
+
+      <text x="310" y="20" font-family="'Red Hat Display', sans-serif" font-size="34" font-weight="700" fill="#BAC9C7">Clean Arch</text>
+      <text x="310" y="42" font-family="'Red Hat Display', sans-serif" font-size="13" font-weight="400" fill="#BAC9C7">Go 1.24+ Gin Core</text>
+    </g>
+  </g>
+
+  <!-- Right Side Interactive Graphic Cards -->
+  <g transform="translate(730, 95)" filter="url(#shadow1)">
+    <!-- Main Floating Glass Card -->
+    <rect x="0" y="0" width="380" height="440" rx="22" fill="#223734" fill-opacity="0.9" stroke="#50736E" stroke-width="1.5"/>
+
+    <!-- Card Header -->
+    <g transform="translate(28, 30)">
+      <rect x="0" y="0" width="44" height="44" rx="12" fill="#3A5451" stroke="#7AE5CD" stroke-width="1.5"/>
+      <!-- Recycle loop icon -->
+      <path d="M 22 14 L 27 22 L 23 22 C 23 27 27 30 31 30 L 31 32 C 25 32 21 28 21 22 L 17 22 Z" fill="#7AE5CD"/>
+      <path d="M 13 26 C 13 21 17 18 21 18 L 21 16 C 15 16 11 20 11 26 Z" fill="#BAC9C7"/>
+
+      <text x="56" y="20" font-family="'Red Hat Display', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">ONECYCLE Kiosk</text>
+      <text x="56" y="38" font-family="'Red Hat Display', sans-serif" font-size="12" font-weight="500" fill="#7AE5CD">● Active IoT Live Session</text>
+    </g>
+
+    <!-- Waste Classification Chips -->
+    <g transform="translate(28, 105)">
+      <!-- Item 1: PET Bottle -->
+      <rect x="0" y="0" width="324" height="66" rx="14" fill="#2A423F" stroke="#3D5F5A" stroke-width="1"/>
+      <circle cx="34" cy="33" r="16" fill="#3A5451"/>
+      <text x="27" y="38" font-family="'Red Hat Display', sans-serif" font-size="15" fill="#7AE5CD">🥤</text>
+      <text x="62" y="28" font-family="'Red Hat Display', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Transparent PET</text>
+      <text x="62" y="48" font-family="'Red Hat Display', sans-serif" font-size="12" fill="#BAC9C7">AI Confidence 99.2%</text>
+      <text x="245" y="39" font-family="'Red Hat Display', sans-serif" font-size="16" font-weight="700" fill="#7AE5CD">+100 pts</text>
+
+      <!-- Item 2: Aluminum Can -->
+      <rect x="0" y="78" width="324" height="66" rx="14" fill="#2A423F" stroke="#3D5F5A" stroke-width="1"/>
+      <circle cx="34" cy="111" r="16" fill="#3A5451"/>
+      <text x="27" y="116" font-family="'Red Hat Display', sans-serif" font-size="15" fill="#7AE5CD">🥫</text>
+      <text x="62" y="106" font-family="'Red Hat Display', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Aluminum CAN</text>
+      <text x="62" y="126" font-family="'Red Hat Display', sans-serif" font-size="12" fill="#BAC9C7">AI Confidence 98.4%</text>
+      <text x="252" y="117" font-family="'Red Hat Display', sans-serif" font-size="16" font-weight="700" fill="#7AE5CD">+80 pts</text>
+
+      <!-- Item 3: Glass Bottle -->
+      <rect x="0" y="156" width="324" height="66" rx="14" fill="#2A423F" stroke="#3D5F5A" stroke-width="1"/>
+      <circle cx="34" cy="189" r="16" fill="#3A5451"/>
+      <text x="27" y="194" font-family="'Red Hat Display', sans-serif" font-size="15" fill="#7AE5CD">🍾</text>
+      <text x="62" y="184" font-family="'Red Hat Display', sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Glass Bottle</text>
+      <text x="62" y="204" font-family="'Red Hat Display', sans-serif" font-size="12" fill="#BAC9C7">AI Confidence 97.9%</text>
+      <text x="245" y="195" font-family="'Red Hat Display', sans-serif" font-size="16" font-weight="700" fill="#7AE5CD">+120 pts</text>
+    </g>
+
+    <!-- Bottom Carbon Summary Card -->
+    <g transform="translate(28, 345)">
+      <rect x="0" y="0" width="324" height="65" rx="14" fill="url(#mintGrad)" fill-opacity="0.15" stroke="#7AE5CD" stroke-opacity="0.4" stroke-width="1"/>
+      <text x="20" y="27" font-family="'Red Hat Display', sans-serif" font-size="12" font-weight="600" fill="#BAC9C7">TOTAL CARBON REDUCED</text>
+      <text x="20" y="49" font-family="'Red Hat Display', sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">250.4 kg CO₂</text>
+      <text x="225" y="42" font-family="'Red Hat Display', sans-serif" font-size="13" font-weight="700" fill="#7AE5CD">🌲 36 Trees</text>
+    </g>
+  </g>
+</svg>
