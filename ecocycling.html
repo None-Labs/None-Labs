@@ -1,372 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="icon/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoCycling (ONECYCLE) - None Labs</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/icon.css">
-    <link rel="stylesheet" href="css/footer.css">
-
-    <style>
-        b {
-            color: #343434;
-            font-family: "Red Hat Display";
-            font-size: 42px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        h2,
-        p {
-            color: #888;
-            font-family: "Red Hat Display";
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-
-        .showcase-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        #ecocycling-banner {
-            width: 100%;
-            height: auto;
-            margin: 80px 0px 80px;
-            display: block;
-            border-radius: 20px;
-            box-shadow: 0 16px 40px rgba(58, 84, 81, 0.18);
-        }
-
-        .hero-action-bar {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 90px;
-            align-items: center;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #3A5451;
-            color: #FFFFFF;
-            padding: 16px 28px;
-            border-radius: 12px;
-            font-family: "Red Hat Display";
-            font-weight: 600;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 14px rgba(58, 84, 81, 0.25);
-        }
-
-        .btn-primary:hover {
-            background: #2D4441;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(58, 84, 81, 0.35);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #E5ECEB;
-            color: #3A5451;
-            padding: 16px 28px;
-            border-radius: 12px;
-            font-family: "Red Hat Display";
-            font-weight: 600;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .btn-secondary:hover {
-            background: #D5E1DF;
-            transform: translateY(-2px);
-        }
-
-        .feature-section {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            margin-bottom: 150px;
-            padding: 40px;
-            background: #FFFFFF;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-        }
-
-        .feature-section.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .text-content {
-            flex: 1 1 45%;
-        }
-
-        .title {
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: #343434;
-        }
-
-        .description {
-            color: #555555;
-            font-family: "Red Hat Display";
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-        }
-
-        .badge {
-            display: inline-block;
-            font-family: "Red Hat Display";
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            background: #EAF4F2;
-            color: #3A5451;
-            margin-bottom: 16px;
-        }
-
-        .image-content {
-            flex: 1 1 55%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 55%;
-            background: #F8F9F9;
-            border-radius: 18px;
-            padding: 24px;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .image-content img {
-            max-width: 100%;
-            max-height: 480px;
-            height: auto;
-            border-radius: 12px;
-            object-fit: contain;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 140px;
-        }
-
-        .tech-card {
-            background: #FFFFFF;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 20px;
-            padding: 32px 28px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-            transition: transform 0.2s ease;
-        }
-
-        .tech-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .tech-card h3 {
-            font-family: "Red Hat Display";
-            font-size: 22px;
-            font-weight: 700;
-            color: #343434;
-            margin-top: 14px;
-            margin-bottom: 10px;
-        }
-
-        .tech-card p {
-            font-family: "Red Hat Display";
-            font-size: 16px;
-            line-height: 150%;
-            color: #666666;
-            margin: 0;
-        }
-
-        .tech-pill {
-            display: inline-block;
-            font-family: "Ubuntu", sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 6px;
-            background: #3A5451;
-            color: #FFFFFF;
-        }
-
-        #small-screen {
-            display: none;
-            justify-content: center;
-            align-items: center;
-            min-height: 100dvh;
-        }
-
-        #small-screen-text {
-            padding: 3rem;
-            font-size: 2rem;
-            border-radius: 1rem;
-        }
-
-        @media (max-width: 1400px) {
-            #large-screen {display: none;}
-            #small-screen {display: flex;}
-        }
-
-        @media (min-width: 1400px) {
-            #large-screen {display: block;}
-            #small-screen {display: none;}
-        }
-    </style>
-
+  <meta charset="UTF-8" />
+  <link rel="icon" href="icon/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoCycling (ONECYCLE) — None Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700;800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html, body { margin: 0; padding: 0; background-color: #F5F5F5; color: #343434; font-family: 'Red Hat Display', 'Pretendard', sans-serif; }
+    img { -webkit-user-drag: none; user-select: none; }
+  </style>
 </head>
 
-<body>
+<body class="min-h-screen bg-[#F5F5F5] flex flex-col justify-between">
 
-    <div id="small-screen">
-        <div id="small-screen-text banner">
-            <h1 id="banner">It is not marked in that size.</h1>
-        </div>
+  <!-- NONE LABS GLOBAL SUITE TOP BAR -->
+  <header class="sticky top-0 z-50 bg-[#1E1E1E]/95 backdrop-blur-md border-b border-[#343434] px-6 py-2.5 flex items-center justify-between text-xs text-white shadow-md">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-1.5 text-white font-bold text-sm tracking-tight hover:opacity-80 font-['Ubuntu']">
+        <span class="text-[#888888] font-bold">[</span> None Labs <span class="text-[#888888] font-bold">]</span>
+      </a>
+      <span class="text-[#555555]">|</span>
+      <span class="text-[#AAAAAA] font-mono text-[11px] hidden sm:inline">Product Specification: EcoCycling (ONECYCLE)</span>
     </div>
+    <nav class="flex items-center gap-1.5 overflow-x-auto">
+      <a href="index.html" class="text-[#CCCCCC] hover:text-white px-2.5 py-1 rounded hover:bg-[#2C2C2E]">Home</a>
+      <a href="products.html" class="text-[#CCCCCC] hover:text-white px-2.5 py-1 rounded hover:bg-[#2C2C2E]">Products</a>
+      <a href="gittester.html" class="text-[#CCCCCC] hover:text-white px-2.5 py-1 rounded hover:bg-[#2C2C2E]">Git Tester</a>
+      <a href="ecocycling.html" class="bg-[#3A5451] text-white font-semibold px-2.5 py-1 rounded">EcoCycling</a>
+      <a href="https://none-labs-branding.pages.dev/" target="_blank" class="bg-[#343434] text-[#56CFE1] font-semibold px-2.5 py-1 rounded">Design Hub ↗</a>
+    </nav>
+  </header>
 
-    <div id="large-screen">
+  <!-- MAIN SHOWCASE CONTAINER -->
+  <main class="w-full max-w-[1280px] mx-auto px-6 py-12 flex-1">
 
-        <div id="menu-bar">
-            <a id="logo-full" style="margin-right: 58px;" href="/"></a>
-            <a id="menu" href="/products">Products</a>
-            <a id="menu" href="https://ecocycling.none-labs.dev" target="_blank" rel="noopener">Service Web</a>
-            <a id="menu" href="https://github.com/EcoCycling" target="_blank" rel="noopener">GitHub</a>
+    <!-- HERO HEADER -->
+    <section class="mb-14">
+      <div class="inline-flex items-center gap-2 bg-[#EAF4F2] text-[#3A5451] font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4 border border-[#3A5451]/10">
+        <span class="w-2 h-2 rounded-full bg-[#3A5451] animate-pulse"></span>
+        AI Vision &amp; ESG IoT Solution
+      </div>
+      <div class="flex items-center gap-4 mb-4">
+        <img src="img/ecocycling-logo.png" alt="EcoCycling Logo" class="w-12 h-12 rounded-xl object-contain shadow-sm border border-black/5" />
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#343434] tracking-tight">
+          EcoCycling <span class="font-normal text-[#686868]">(ONECYCLE)</span>
+        </h1>
+      </div>
+      <p class="text-xl md:text-2xl text-[#686868] max-w-3xl font-normal leading-relaxed mb-8">
+        Smart recycling kiosk meets automated vision intelligence and eco-reward incentives.
+      </p>
+
+      <!-- HERO ACTION BUTTONS -->
+      <div class="flex flex-wrap items-center gap-3.5">
+        <a href="https://trash.none-labs.dev/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#3A5451] hover:bg-[#2D4441] text-white px-6 py-3.5 rounded-xl font-semibold text-base shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5">
+          <span>Explore Kiosk Vision Demo</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+        <a href="https://app.none-labs.dev/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#E5ECEB] hover:bg-[#D5E1DF] text-[#3A5451] px-6 py-3.5 rounded-xl font-semibold text-base transition-all duration-200 hover:-translate-y-0.5">
+          <span>Download Mobile App</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        </a>
+        <a href="https://ecocycling.none-labs.dev/press/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#FFFFFF] hover:bg-[#F9F9F9] text-[#686868] border border-[#DEDEDE] px-6 py-3.5 rounded-xl font-semibold text-base transition-all duration-200">
+          <span>Research &amp; Awards Archive</span>
+        </a>
+        <a href="products.html" class="inline-flex items-center gap-2 bg-[#FFFFFF] hover:bg-[#F9F9F9] text-[#686868] border border-[#DEDEDE] px-6 py-3.5 rounded-xl font-semibold text-base transition-all duration-200">
+          <span>All Products</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- HERO GRAPHIC BANNER CARD -->
+    <section class="mb-20 bg-gradient-to-br from-[#2D4441] to-[#1E2E2C] rounded-2xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
+      <div class="relative z-10 max-w-2xl">
+        <span class="text-xs uppercase font-mono tracking-wider text-[#A3D9D2] bg-white/10 px-3 py-1 rounded-full mb-3 inline-block">5-Step Automated Pipeline</span>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">AI Vision Sorting &amp; IoT Gate Automation</h2>
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-['Red_Hat_Text']">
+          Embedded Linux hardware agent seamlessly controls real-time camera recognition, dynamic QR token verification, automated gate motors, and load-cell weight calibration.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
+            <div class="text-xl font-bold text-[#A3D9D2]">&lt; 150ms</div>
+            <div class="text-[11px] text-gray-300 mt-0.5">AI Inference</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
+            <div class="text-xl font-bold text-[#A3D9D2]">99.4%</div>
+            <div class="text-[11px] text-gray-300 mt-0.5">Classification Purity</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
+            <div class="text-xl font-bold text-[#A3D9D2]">5-Step</div>
+            <div class="text-[11px] text-gray-300 mt-0.5">IoT State Machine</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
+            <div class="text-xl font-bold text-[#A3D9D2]">ACID</div>
+            <div class="text-[11px] text-gray-300 mt-0.5">Points Ledger</div>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative vector -->
+      <svg class="absolute right-[-40px] bottom-[-40px] w-96 h-96 opacity-10 pointer-events-none" fill="currentColor" viewBox="0 0 200 200">
+        <path d="M45,-78C58,-71,68,-58,74,-44C80,-30,81,-15,80,0C79,15,76,30,69,43C62,56,51,67,38,74C25,81,10,83,-4,84C-19,85,-34,84,-46,77C-58,70,-67,57,-73,43C-80,29,-84,14,-83,-1C-82,-16,-76,-31,-67,-44C-58,-56,-45,-66,-32,-73C-18,-81,-4,-86,10,-87C24,-88,38,-85,45,-78Z" transform="translate(100 100)" />
+      </svg>
+    </section>
+
+    <!-- FEATURE 1: COMPUTER VISION AI -->
+    <section class="mb-16 bg-[#FFFFFF] border border-black/5 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#3A5451] bg-[#EAF4F2] px-3.5 py-1 rounded-full mb-3">Computer Vision AI</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#343434] leading-tight mb-4">
+          <span class="text-[#3A5451]">Classify</span>, Sort,<br />Measure Pure Resource
+        </h2>
+        <p class="text-lg text-[#555555] leading-relaxed font-['Red_Hat_Text'] mb-6">
+          Real-time AI Vision detects PET bottles, aluminum cans, glass, and general waste in milliseconds. Automated weight sensor accurately calculates purity and prevents sorting errors.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-gray-500">
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Inference: &lt;150ms</span>
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Accuracy: 99.4% Purity</span>
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Sensor: 4-Point Load Cell</span>
+        </div>
+      </div>
+      <div class="flex-1 w-full flex justify-center items-center bg-[#F8F9F9] border border-black/5 rounded-xl p-6">
+        <img src="img/ecocycling-kiosk.png" alt="Smart Waste Sorting Kiosk UI Display" class="max-h-[380px] w-auto object-contain rounded-lg shadow-md" />
+      </div>
+    </section>
+
+    <!-- FEATURE 2: SMART IOT KIOSK AGENT (REVERSE) -->
+    <section class="mb-16 bg-[#FFFFFF] border border-black/5 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row-reverse items-center gap-10">
+      <div class="flex-1">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#3A5451] bg-[#EAF4F2] px-3.5 py-1 rounded-full mb-3">IoT &amp; Hardware Bridge</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#343434] leading-tight mb-4">
+          Scan, <span class="text-[#3A5451]">Interact</span>,<br />Automated Gate Control
+        </h2>
+        <p class="text-lg text-[#555555] leading-relaxed font-['Red_Hat_Text'] mb-6">
+          High-performance Golang IoT Agent orchestrates a 5-step state machine (Stand-by, QR Scan, Deposit, Measure, Done) with WebSocket streaming and automated bin door mechanics.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-gray-500">
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Protocol: WebSocket &amp; gRPC</span>
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Runtime: Embedded Linux</span>
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Actuator: Solenoid Relay</span>
+        </div>
+      </div>
+      <div class="flex-1 w-full flex justify-center items-center bg-[#F8F9F9] border border-black/5 rounded-xl p-6">
+        <img src="img/ecocycling-scan.png" alt="IoT Kiosk Dynamic QR Code Interaction" class="max-h-[380px] w-auto object-contain rounded-lg shadow-md" />
+      </div>
+    </section>
+
+    <!-- FEATURE 3: MOBILE APP & ESG METRICS -->
+    <section class="mb-20 bg-[#FFFFFF] border border-black/5 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#3A5451] bg-[#EAF4F2] px-3.5 py-1 rounded-full mb-3">Mobile App &amp; ESG Metrics</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#343434] leading-tight mb-4">
+          Earn Points,<br /><span class="text-[#3A5451]">Reduce Carbon</span> Emissions
+        </h2>
+        <p class="text-lg text-[#555555] leading-relaxed font-['Red_Hat_Text'] mb-6">
+          Recycled resources convert directly into live reward points and carbon reduction metrics. Track tree-planting equivalents and spend points seamlessly at certified green partner stores.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-gray-500">
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Ledger: ACID Point Engine</span>
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Metric: ISO 14064 Carbon Unit</span>
+          <span class="bg-[#F5F5F5] border border-black/5 px-3 py-1.5 rounded-md">Client: React Native / Expo</span>
+        </div>
+      </div>
+      <div class="flex-1 w-full flex justify-center items-center bg-[#F8F9F9] border border-black/5 rounded-xl p-6">
+        <img src="img/ecocycling-app.png" alt="Mobile App Carbon Ledger and Rewards Interface" class="max-h-[420px] w-auto object-contain rounded-lg shadow-md" />
+      </div>
+    </section>
+
+    <!-- TECHNICAL ARCHITECTURE GRID (3 COLUMNS) -->
+    <section class="mb-14">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#888888]">Architecture &amp; Engineering</span>
+        <h2 class="text-3xl font-extrabold text-[#343434] mt-1">High-Reliability Tech Stack</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- CARD 1 -->
+        <div class="bg-white rounded-xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+          <span class="inline-block bg-[#E5ECEB] text-[#3A5451] text-xs font-bold px-3 py-1 rounded-full mb-4">Golang 1.24+ Gin</span>
+          <h3 class="text-lg font-bold text-[#343434] mb-2">Clean Architecture Backend</h3>
+          <p class="text-sm text-[#555555] leading-relaxed font-['Red_Hat_Text']">
+            Robust REST API and WebSocket engine managing ACID point ledgers, OTP authentication, and multi-tenant kiosk hardware sessions on PostgreSQL 16.
+          </p>
         </div>
 
-        <main class="showcase-container">
-            <img id="ecocycling-banner" src="img/ecocycling.svg" alt="EcoCycling (ONECYCLE) Platform Banner">
-
-            <div class="hero-action-bar">
-                <a href="https://ecocycling.none-labs.dev" target="_blank" rel="noopener" class="btn-primary">
-                    <span>Visit Live Service (ecocycling.none-labs.dev)</span>
-                    <span>→</span>
-                </a>
-                <a href="https://ecocycling.none-labs.dev/press/" target="_blank" rel="noopener" class="btn-secondary">
-                    <span>Research &amp; Awards Archive</span>
-                </a>
-                <a href="products.html" class="btn-secondary">
-                    <span>All Products</span>
-                </a>
-            </div>
-
-            <!-- Feature 1: AI Vision Waste Sorting -->
-            <section class="feature-section section-1">
-                <div class="text-content">
-                    <span class="badge">Computer Vision AI</span>
-                    <h2 class="title">
-                        <b>Classify</b>, Sort,
-                        <br>
-                        Measure Pure Resource
-                    </h2>
-                    <p class="description">
-                        Real-time AI Vision detects PET bottles, aluminum cans, glass, and general waste in milliseconds. Automated weight sensor accurately calculates purity and prevents sorting errors.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img src="img/ecocycling-kiosk.png" alt="Smart Waste Sorting Kiosk UI Display">
-                </div>
-            </section>
-
-            <!-- Feature 2: Smart IoT Kiosk Agent -->
-            <section class="feature-section section-2 reverse">
-                <div class="text-content">
-                    <span class="badge">IoT &amp; Hardware Bridge</span>
-                    <h2 class="title">
-                        Scan, <b>Interact</b>,
-                        <br>
-                        Automated Gate Control
-                    </h2>
-                    <p class="description">
-                        High-performance Golang IoT Agent orchestrates a 5-step state machine (Stand-by, QR Scan, Deposit, Measure, Done) with WebSocket streaming and automated bin door mechanics.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img src="img/ecocycling-scan.png" alt="IoT Kiosk Dynamic QR Code Interaction">
-                </div>
-            </section>
-
-            <!-- Feature 3: Eco-Reward & Carbon Points Ledger -->
-            <section class="feature-section section-3">
-                <div class="text-content">
-                    <span class="badge">Mobile App &amp; ESG Metrics</span>
-                    <h2 class="title">
-                        Earn Points,
-                        <br>
-                        <b>Reduce Carbon</b> Emissions
-                    </h2>
-                    <p class="description">
-                        Recycled resources convert directly into live reward points and carbon reduction metrics. Track tree-planting equivalents and spend points seamlessly at certified green partner stores.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img src="img/ecocycling-app.png" alt="Mobile App Carbon Ledger and Rewards Interface">
-                </div>
-            </section>
-
-            <!-- Technical Architecture Grid -->
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <span class="tech-pill">Golang 1.24+ Gin</span>
-                    <h3>Clean Architecture Backend</h3>
-                    <p>Robust REST API and WebSocket engine managing ACID point ledgers, OTP authentication, and multi-tenant kiosk hardware sessions on PostgreSQL 16.</p>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-pill">React Native / Expo 51</span>
-                    <h3>Cross-Platform Mobile App</h3>
-                    <p>Pixel-perfect UI built with TypeScript and Zustand. Offers biometric login, live QR bin scanning, point redemption barcodes, and local map discovery.</p>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-pill">IoT Edge Agent</span>
-                    <h3>Hardware Automation Core</h3>
-                    <p>Embedded Linux state controller interfacing vision cameras, load cells, and motorized doors with failsafe fallback and instant cloud sync.</p>
-                </div>
-            </div>
-
-        </main>
-
-        <div id="footer">
-            <div id="logo-full"></div>
-
-            <div class="footer-info">
-                <div style="display: block;">Representative: Mireu Lim</div>
-                <div style="display: block;">Business Registration Number: 693-17-01866</div>
-                <div style="display: block;">Email: limmireu1214@gmail.com</div>
-                <div style="display: block;">Service Hosting: Google Cloud Platform</div>
-                <div style="display: block;">© 2026. None Labs. All rights reserved.</div>
-            </div>
+        <!-- CARD 2 -->
+        <div class="bg-white rounded-xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+          <span class="inline-block bg-[#E5ECEB] text-[#3A5451] text-xs font-bold px-3 py-1 rounded-full mb-4">React Native / Expo 51</span>
+          <h3 class="text-lg font-bold text-[#343434] mb-2">Cross-Platform Mobile App</h3>
+          <p class="text-sm text-[#555555] leading-relaxed font-['Red_Hat_Text']">
+            Pixel-perfect UI built with TypeScript and Zustand. Offers biometric login, live QR bin scanning, point redemption barcodes, and local map discovery.
+          </p>
         </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-white rounded-xl p-6 border border-black/5 shadow-sm hover:shadow-md transition">
+          <span class="inline-block bg-[#E5ECEB] text-[#3A5451] text-xs font-bold px-3 py-1 rounded-full mb-4">IoT Edge Agent</span>
+          <h3 class="text-lg font-bold text-[#343434] mb-2">Hardware Automation Core</h3>
+          <p class="text-sm text-[#555555] leading-relaxed font-['Red_Hat_Text']">
+            Embedded Linux state controller interfacing vision cameras, load cells, and motorized doors with failsafe fallback and instant cloud sync.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STANDARDIZED SANITIZED FOOTER -->
+  <footer class="w-full bg-[#1A1A1A] text-white py-10 px-6 border-t border-[#2C2C2E]">
+    <div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="font-['Ubuntu'] font-bold text-lg tracking-tight">[ None Labs ]</span>
+        <span class="text-xs text-[#888888]">Convenience in Everyday life</span>
+      </div>
+      <div class="text-xs text-[#888888] text-center sm:text-right">
+        © 2026. None Labs. All rights reserved.
+      </div>
     </div>
+  </footer>
 
 </body>
 
